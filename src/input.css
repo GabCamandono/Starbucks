@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins overflow-y-scroll;
+  }
+  body.open {
+    @apply overflow-hidden
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+  h4 {
+    @apply text-base font-semibold;
+  }
+  p {
+    @apply text-sm;
+  }
+  .header__all {
+    @apply flex flex-col bg-red-50 h-screen gap-5 w-[24rem] top-[4.52rem] justify-center fixed py-5 font-semibold duration-700 right-[-100%] lg:flex-row lg:h-auto lg:w-auto lg:static lg:bg-transparent lg:flex-row;
+  }
+  .header__all.open {
+    @apply right-0 z-50 overflow-y-hidden border-t-2 border-t-black/10;
+  }
+  .header__nav li a {
+    @apply text-black/80;
+  }
+  .toggle__menu {
+    @apply flex flex-col gap-1 z-50 relative lg:hidden;
+  }
+  .toggle__menu span {
+    @apply content-["*"] w-5 h-0.5 rounded-lg ease-in-out duration-700 bg-black/50;
+  }
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 2px) rotate(225deg);
+    transition: 0.5s ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -4px) rotate(-225deg);
+    transition: 0.5s ease;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply hidden;
+  }
+  .rewardsFavorites__tabs:after {
+    @apply content-[""] w-[20%] h-[4px] bg-secondary bottom-0 absolute duration-500;
+  }
+  .rewardsFavorites__tabs:after.tabs-1-underline{
+    @apply left-0;
+  }
+  .rewardsFavorites__tabs:after.tabs-2-underline{
+    @apply left-[20%];
+  }
+  .rewardsFavorites__tabs:after.tabs-3-underline{
+    @apply left-[40%];
+  }
+  .rewardsFavorites__tabs:after.tabs-4-underline{
+    @apply left-[60%];
+  }
+  .rewardsFavorites__tabs:after.tabs-5-underline{
+    @apply left-[80%];
+  }
+  .rewardsFavorites__details {
+    @apply grid hidden 
+  }
+  .rewardsFavorites__details.active {
+   @apply block
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-1 px-4 bg-transparent border-transparent rounded-3xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
+  }
+  .btn.bg-primaryy {
+    @apply bg-primary border text-white hover:bg-transparent;
+  }
+  .btn.bg-secondaryy {
+    @apply bg-secondary text-white hover:bg-secondary/90 active:scale-95;
+  }
+  .btn.bg-whitee {
+    @apply border border-black bg-white hover:bg-black/10;
+  }
+  .btn.bg-blackk {
+     @apply bg-black text-white hover:bg-black/70;
+  }
+  .btn.bg-transparentt {
+    @apply bg-transparent border border-white text-white hover:bg-black/40;
+  }
+}
