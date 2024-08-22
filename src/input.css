@@ -8,7 +8,7 @@
     @apply font-poppins overflow-y-scroll;
   }
   body.open {
-    @apply overflow-hidden
+    @apply overflow-hidden;
   }
   .container {
     @apply max-w-[1600px] w-full px-4 mx-auto;
@@ -57,44 +57,69 @@
   .rewardsFavorites__tabs:after {
     @apply content-[""] w-[20%] h-[4px] bg-secondary bottom-0 absolute duration-500;
   }
-  .rewardsFavorites__tabs:after.tabs-1-underline{
+  .rewardsFavorites__tabs:after.tabs-1-underline {
     @apply left-0;
   }
-  .rewardsFavorites__tabs:after.tabs-2-underline{
+  .rewardsFavorites__tabs:after.tabs-2-underline {
     @apply left-[20%];
   }
-  .rewardsFavorites__tabs:after.tabs-3-underline{
+  .rewardsFavorites__tabs:after.tabs-3-underline {
     @apply left-[40%];
   }
-  .rewardsFavorites__tabs:after.tabs-4-underline{
+  .rewardsFavorites__tabs:after.tabs-4-underline {
     @apply left-[60%];
   }
-  .rewardsFavorites__tabs:after.tabs-5-underline{
+  .rewardsFavorites__tabs:after.tabs-5-underline {
     @apply left-[80%];
   }
   .rewardsFavorites__details {
-    @apply grid hidden 
+    @apply grid hidden;
   }
   .rewardsFavorites__details.active {
-   @apply block
+    @apply block;
+  }
+  .rewardsPayment__method:last-child {
+    @apply border-none;
+  }
+  .footerBottom__icons span {
+    @apply w-[44px] h-[44px] absolute flex justify-center items-center rounded-full transition hover:bg-black/30 hover:duration-100;
+  }
+  .footerBottom__text a {
+    @apply hover:underline;
+  }
+  .footerTop__item small,
+  .footerTop__item i {
+    @apply text-base flex justify-between cursor-pointer duration-500 overflow-hidden ease-in-out duration-500;
+  }
+  .footerTop__item {
+    @apply max-w-[35rem];
+  }
+  .footerTop__item--text {
+    @apply overflow-hidden h-auto max-h-0 ease-in-out duration-500;
+  }
+  .footerTop__item--text.open {
+    @apply max-h-[30rem] duration-500 mt-10;
+  }
+  .footerTop__item i.open {
+    @apply rotate-[-180deg] duration-500;
   }
 }
 
 @layer components {
   .btn {
-    @apply py-1 px-4 bg-transparent border-transparent rounded-3xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
+    @apply py-1 px-4 bg-transparent border-transparent rounded-3xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)] active:scale-95 active:duration-150;
   }
   .btn.bg-primaryy {
     @apply bg-primary border text-white hover:bg-transparent;
   }
   .btn.bg-secondaryy {
-    @apply bg-secondary text-white hover:bg-secondary/90 active:scale-95;
+    @apply bg-secondary text-white hover:bg-secondary/90;
   }
   .btn.bg-whitee {
     @apply border border-black bg-white hover:bg-black/10;
   }
   .btn.bg-blackk {
-     @apply bg-black text-white hover:bg-black/70;
+    @apply bg-black text-white hover:bg-black/70;
   }
   .btn.bg-transparentt {
     @apply bg-transparent border border-white text-white hover:bg-black/40;
