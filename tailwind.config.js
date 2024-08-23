@@ -16,7 +16,8 @@ module.exports = {
       },
       backgroundImage: {
         bgRewards: "url('../img/mobileReward.webp')",
-        bgRewardsDT: "url('../img/bg-rewardpc.png')",
+        bgRewardsDT: "url('../img/xl-hero-desktop_2021.png')",
+        bgAccountDT: "url('../img/rewardsaccount_bg.webp')",
       },
       keyframes: {
         fadeIn: {
@@ -26,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-border-image")],
 };

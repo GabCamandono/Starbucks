@@ -14,19 +14,19 @@
     @apply max-w-[1600px] w-full px-4 mx-auto;
   }
   h1 {
-    @apply text-5xl;
+    @apply font-bold text-sm;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-3xl font-semibold lg:text-4xl;
   }
   h3 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-semibold lg:text-3xl;
   }
   h4 {
-    @apply text-base font-semibold;
+    @apply text-base font-semibold lg:text-2xl;
   }
   p {
-    @apply text-sm;
+    @apply text-sm lg:text-[1rem];
   }
   .header__all {
     @apply flex flex-col bg-red-50 h-screen gap-5 w-[24rem] top-[4.52rem] justify-center fixed py-5 font-semibold duration-700 right-[-100%] lg:flex-row lg:h-auto lg:w-auto lg:static lg:bg-transparent lg:flex-row;
@@ -89,13 +89,19 @@
   }
   .footerTop__item small,
   .footerTop__item i {
-    @apply text-base flex justify-between cursor-pointer duration-500 overflow-hidden ease-in-out duration-500;
+    @apply text-base flex justify-between cursor-pointer duration-500 overflow-hidden ease-in-out duration-500 lg:text-[1.12rem] lg:pointer-events-none;
+  }
+  .footerTop__item i{
+    @apply lg:hidden
   }
   .footerTop__item {
     @apply max-w-[35rem];
   }
   .footerTop__item--text {
     @apply overflow-hidden h-auto max-h-0 ease-in-out duration-500;
+  }
+  .footerTop__item--text a {
+    @apply text-black/50 hover:text-black;
   }
   .footerTop__item--text.open {
     @apply max-h-[30rem] duration-500 mt-10;
